@@ -41,7 +41,7 @@ public class SmsReceiver extends BroadcastReceiver {
         new Thread(new Runnable() {
             public void run() {
                 GMailSender sender = new GMailSender("quacktest01@gmail.com",
-                        "awgeybqbshmsrvsm");
+                        "ayicgipffjnmmucv");
                 try {
                     sender.sendMail("New SMS from " + originatingAddress,
                             messageBody,
