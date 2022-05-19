@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "otp_forward_db";
     private static final int DATABASE_VERSION = 1;
-    private static final String EMAILS_TABLE_CREATE = "create table if not exists emails(_id integer primary key autoincrement, email text);";
-    private static final String KEYWORDS_TABLE_CREATE = "create table if not exists keywords(_id integer primary key autoincrement, keyword text, email_id integer);";
+    public static final String EMAILS_TABLE_CREATE = "create table if not exists emails(_id integer primary key autoincrement, email text);";
+    public static final String KEYWORDS_TABLE_CREATE = "create table if not exists keywords(_id integer primary key autoincrement, keyword text, email_id integer);";
 
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, (SQLiteDatabase.CursorFactory) null, 1);

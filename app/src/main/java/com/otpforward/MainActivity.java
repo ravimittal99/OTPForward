@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Cursor fetchAllEmails = dBAdapter.fetchAllEmails();
                     fetchAllEmails.moveToFirst();
                     while (!fetchAllEmails.isAfterLast()) {
-                        arrayList.add(fetchAllEmails.getString(fetchAllEmails.getColumnIndex(NotificationCompat.CATEGORY_EMAIL)));
+                        arrayList.add(fetchAllEmails.getString(fetchAllEmails.getColumnIndex("email")));
                         arrayList2.add(Integer.valueOf(fetchAllEmails.getInt(fetchAllEmails.getColumnIndex("_id"))));
                         fetchAllEmails.moveToNext();
                     }
